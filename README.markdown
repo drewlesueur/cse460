@@ -1,7 +1,8 @@
 Tip Calculator
 ==============
 
-See working implementation at http://cse460.the.tl
+See working implementation at [http://cse460.the.tl]
+
 
 Tip Calculator implemented with
 object oriented coffeescript
