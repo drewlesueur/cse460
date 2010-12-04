@@ -13,8 +13,8 @@ class Controller
     this["handle_" + field](val)
 
   handle_numberOfPeople: (numb) ->
-    @tip.setNumberOfPeople numb
-    @view.renderGuests(@tip)
+    if  @tip.setNumberOfPeople numb
+      @view.renderGuests(@tip)
   handle_tax: (tax) ->
     @tip.setTax tax
     @view.renderGuests(tip)

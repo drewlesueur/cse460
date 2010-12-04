@@ -19,27 +19,26 @@
     return (this.rate = rate - 0);
   };
   Tip.prototype.setNumberOfPeople = function(numb) {
-    var _result, diff, i, old;
+    var diff, i, old;
     if (numb === "") {
-      return null;
+      return false;
     }
     old = this.guests.length;
     diff = numb - old;
     this.numberOfPeople = numb - 0;
     if (diff <= 0) {
-      return null;
+      return true;
     }
-    _result = [];
     for (i = old; (old <= this.numberOfPeople - 1 ? i <= this.numberOfPeople - 1 : i >= this.numberOfPeople - 1); (old <= this.numberOfPeople - 1 ? i += 1 : i -= 1)) {
-      _result.push(this.guests[i] = new Guest({
+      this.guests[i] = new Guest({
         name: "",
         percent: "",
         cost: "",
         tip: "",
         total: ""
-      }));
+      });
     }
-    return _result;
+    return true;
   };
   window.Tip = Tip;
 }).call(this);

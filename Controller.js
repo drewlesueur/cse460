@@ -14,8 +14,7 @@
     return this["handle_" + field](val);
   };
   Controller.prototype.handle_numberOfPeople = function(numb) {
-    this.tip.setNumberOfPeople(numb);
-    return this.view.renderGuests(this.tip);
+    return this.tip.setNumberOfPeople(numb) ? this.view.renderGuests(this.tip) : null;
   };
   Controller.prototype.handle_tax = function(tax) {
     this.tip.setTax(tax);

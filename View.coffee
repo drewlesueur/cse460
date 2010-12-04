@@ -49,7 +49,8 @@ class View
       <h1>Drew LeSueur's Tip Calculator</h1>
       <pre>
       Locale:             <select><option>USA</option></select>
-      Total tax          $<input type="text" id="tax" value=""/> If entered, will be included
+      Total tax          $<input type="text" id="tax" value=""/>
+      (If tax entered, will be included)
       Tip rate:           <input type="text" id="rate" value=""/>%
       Cost of Bill:      $<input type="text" id="cost" value=""/>
       Total Tip          $<input type="text" readonly id="tip" value=""/>

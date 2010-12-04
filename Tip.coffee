@@ -18,15 +18,15 @@ class Tip
    @rate = rate - 0
   setNumberOfPeople: (numb) ->
     if numb is ""
-      return
+      return false
     old = @guests.length
     diff = numb - old
     @numberOfPeople = numb - 0
     if diff <= 0
-      return
+      return true
     for i in [old..@numberOfPeople-1]
       @guests[i] = new Guest name: "", percent: "", cost: "", tip: "", total: ""
-
+    return true
 
 window.Tip = Tip
 
