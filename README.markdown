@@ -7,6 +7,7 @@ Tip Calculator implemented with
 object oriented coffeescript
 
 the main files are
+
 * `Controller.coffee`
 * `View.coffee`
 * `Tip.coffee` (for the model)
