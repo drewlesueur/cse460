@@ -6,9 +6,9 @@
   };
   View.prototype.initialRendered = false;
   View.prototype.render = function(tip) {
-    $('#tax').val(tip.tax);
-    $('#rate').val(tip.rate);
-    $('#cost').val(tip.cost);
+    $('#tax').val(tip.tax || "");
+    $('#rate').val(tip.rate || "");
+    $('#cost').val(tip.cost || "");
     $('#tip').val(tip.rate * .01 * (tip.cost + tip.tax));
     $('#grand').val(($('#tip').val() - 0) + ($('#tax').val() - 0) + ($('#cost').val() - 0));
     return $('#numberOfPeople').val(tip.numberOfPeople);
@@ -37,7 +37,7 @@
     tippy = (percent * .01) * cost;
     total = cost + tippy;
     guest = tip.guests[id];
-    $('#guests').append($("<div class=\"person\" id=\"person_" + (id) + "\">\n  <pre>\n  Name        <input type=\"text\" class=\"name\" value=\"" + (guest.name) + "\" />\n  Percent     <input size=\"2\" type=\"text\" class=\"percent\" value=\"" + (percent) + "\"/>%\n  cost w tax $<input type=\"text\" readonly class=\"cost\" value=\"" + (cost) + "\" />\n  tip        $<input type=\"text\" readonly class=\"tip\" value=\"" + (tippy) + "\"/>\n  total      $<input type=\"text\" readonly class=\"total\" value=\"" + (total) + "\"/>\n  </pre>\n</div>"));
+    $('#guests').append($("<div class=\"person\" id=\"person_" + (id) + "\">\n  <pre>\n  Name        <input type=\"text\" class=\"name\" value=\"" + (guest.name) + "\" />\n  Percent     <input size=\"4\" type=\"text\" class=\"percent\" value=\"" + (percent) + "\"/>%\n  cost w tax $<input type=\"text\" readonly class=\"cost\" value=\"" + (cost) + "\" />\n  tip        $<input type=\"text\" readonly class=\"tip\" value=\"" + (tippy) + "\"/>\n  total      $<input type=\"text\" readonly class=\"total\" value=\"" + (total) + "\"/>\n  </pre>\n</div>"));
     controller = this.controller;
     return $("#person_" + (id)).find('input').each(function() {
       return $(this).keyup(function(e) {

@@ -12,10 +12,16 @@ class Tip
 
   setTax: (tax) ->
     @tax = tax - 0
+    if _.isNaN(@tax)
+      @tax = 0
   setCost: (cost) ->
     @cost = cost - 0
+    if _.isNaN(@cost)
+      @cost = 0
   setRate: (rate) ->
    @rate = rate - 0
+   if _.isNaN(@rate)
+     @rate = 0
   setNumberOfPeople: (numb) ->
     if numb is ""
       return false

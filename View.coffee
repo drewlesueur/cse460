@@ -4,9 +4,9 @@ class View
   constructor: (controller) ->
     @controller = controller 
   render: (tip) ->
-    $('#tax').val tip.tax
-    $('#rate').val tip.rate
-    $('#cost').val tip.cost
+    $('#tax').val tip.tax || ""
+    $('#rate').val tip.rate || ""
+    $('#cost').val tip.cost || ""
     $('#tip').val tip.rate * .01 * (tip.cost + tip.tax)
 
     $('#grand').val ($('#tip').val() - 0) + ($('#tax').val() - 0) + ($('#cost').val() - 0)
@@ -31,7 +31,7 @@ class View
       <div class="person" id="person_#{id}">
         <pre>
         Name        <input type="text" class="name" value="#{guest.name}" />
-        Percent     <input size="2" type="text" class="percent" value="#{percent}"/>%
+        Percent     <input size="4" type="text" class="percent" value="#{percent}"/>%
         cost w tax $<input type="text" readonly class="cost" value="#{cost}" />
         tip        $<input type="text" readonly class="tip" value="#{tippy}"/>
         total      $<input type="text" readonly class="total" value="#{total}"/>

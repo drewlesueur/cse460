@@ -10,13 +10,16 @@
   Tip.prototype.guests = [];
   Tip.prototype.updateTotals = function() {};
   Tip.prototype.setTax = function(tax) {
-    return (this.tax = tax - 0);
+    this.tax = tax - 0;
+    return _.isNaN(this.tax) ? (this.tax = 0) : null;
   };
   Tip.prototype.setCost = function(cost) {
-    return (this.cost = cost - 0);
+    this.cost = cost - 0;
+    return _.isNaN(this.cost) ? (this.cost = 0) : null;
   };
   Tip.prototype.setRate = function(rate) {
-    return (this.rate = rate - 0);
+    this.rate = rate - 0;
+    return _.isNaN(this.rate) ? (this.rate = 0) : null;
   };
   Tip.prototype.setNumberOfPeople = function(numb) {
     var diff, i, old;
