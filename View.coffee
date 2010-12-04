@@ -46,7 +46,7 @@ class View
   renderInitial: (tip) ->
     @initialRendered  = true
     $('body').append $ """
-      <h1>Drew's Tip Calculator</h1>
+      <h1>Drew LeSueur's Tip Calculator</h1>
       <pre>
       Locale:             <select><option>USA</option></select>
       Total tax          $<input type="text" id="tax" value=""/> If entered, will be included

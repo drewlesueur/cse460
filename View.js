@@ -48,7 +48,7 @@
   View.prototype.renderInitial = function(tip) {
     var controller;
     this.initialRendered = true;
-    $('body').append($("<h1>Drew's Tip Calculator</h1>\n<pre>\nLocale:             <select><option>USA</option></select>\nTotal tax          $<input type=\"text\" id=\"tax\" value=\"\"/> If entered, will be included\nTip rate:           <input type=\"text\" id=\"rate\" value=\"\"/>%\nCost of Bill:      $<input type=\"text\" id=\"cost\" value=\"\"/>\nTotal Tip          $<input type=\"text\" readonly id=\"tip\" value=\"\"/>\nGRAND TOTAL:        <input type=\"text\" readonly id=\"grand\" value=\"\"/>\nNumber of people:   <input type=\"text\" id=\"numberOfPeople\" value=\"\"/>\n</pre>\n<div id=\"guests\">\n\n</div>"));
+    $('body').append($("<h1>Drew LeSueur's Tip Calculator</h1>\n<pre>\nLocale:             <select><option>USA</option></select>\nTotal tax          $<input type=\"text\" id=\"tax\" value=\"\"/> If entered, will be included\nTip rate:           <input type=\"text\" id=\"rate\" value=\"\"/>%\nCost of Bill:      $<input type=\"text\" id=\"cost\" value=\"\"/>\nTotal Tip          $<input type=\"text\" readonly id=\"tip\" value=\"\"/>\nGRAND TOTAL:        <input type=\"text\" readonly id=\"grand\" value=\"\"/>\nNumber of people:   <input type=\"text\" id=\"numberOfPeople\" value=\"\"/>\n</pre>\n<div id=\"guests\">\n\n</div>"));
     this.render(tip);
     controller = this.controller;
     return $('input').keyup(function(e) {
